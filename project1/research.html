@@ -1,0 +1,606 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Research</title>
+        <style>
+        body {
+            width: 1080px;
+            height: 760px;
+            background-color: #BBCD98;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+            font-size: 12px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: bold;
+            line-height: 26px;
+            display: block;
+            border-collapse: collapse;
+        }
+        td {
+            border: 4px solid;
+            width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        table {
+            border: 4px solid;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .marginauto {
+            margin: 10px auto 20px;
+            display: block;
+        }
+        .center {
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            width: 50%;
+        }
+        tr#headerR {
+            background-image: url("images/headerR.jpg");
+            background-repeat: repeat;
+            background-size: 100% 100%;
+            color: white;
+        }
+        ul#nav {
+            display: block;
+            vertical-align: top;
+            height: 200px;
+            font-weight: bold;
+            padding: 5px;
+            text-decoration: none;
+            text-align: center;
+            color: #AA98CD;
+        }
+        ul#bot li {
+            display: block;
+            font-weight: bold;
+            padding: 5px;
+            text-decoration: none;
+            text-align: center;
+            color: #AA98CD;
+            font-weight: bold;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+        a:visited {
+            color: green;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: hotpink;
+            text-decoration: none;
+        }
+        
+        a:link {
+            color: green;
+            text-decoration: none;
+        }
+        .bold {
+            font-weight: bold;
+        }
+        .purple {
+            background-color: #AA98CD;
+        }
+        img#imgRightt {
+            width: 100px;
+        }
+        .top {
+            position: absolute;
+            top: 50px;
+        }
+        .heeeed {
+            background-image: url("images/headerR.jpg");
+            background-repeat: repeat;
+            background-size: 100% 100%;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr id="headerR">
+            <td class="bold">
+                <h1>Professor B. Gousie</h1>
+                <h2>Professor of Computer Science</h2>
+                <p>Department Of Computer Science</p>
+                <p>Wheaton College</p>
+                <p>Norton, MA 02766</p>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="purple">
+                <h1 class="center">Navigation</h1>
+                <nav>
+                    <ul id="nav" class="center">
+                        <li><a href="http://cs.wheatoncollege.edu/mgousie/index.html">Home</a></li>
+                        <li><a href="http://cs.wheatoncollege.edu/mgousie/comp212.html">Comp 212</a></li>
+                        <li><a href="http://cs.wheatoncollege.edu/mgousie/comp220.html">Comp 220</a></li>
+                        <li><a href="http://cs.wheatoncollege.edu/mgousie/research.html">Research</a></li>
+                        <li><a href="http://cs.wheatoncollege.edu/mgousie/antiresearch.html">Anti-Research</a></li>
+                    </ul>
+                </nav>
+
+            </td>
+            <td>
+                <table>
+                    <tr>
+                       <td colspan = "2">
+                            <h2>Research</h2>
+                            <p>
+                            My research includes areas in Computational Geometry, Geographic Information Systems (GIS), 
+                            Computer Graphics, and Visualization.
+                            The main areas 
+                            currently under investigation are:
+                            <ul>
+                                <li>Data Visualization - my current focus is on clustering and visualizing top ten data over
+                                    time. Examples include 
+                                    <a href="#covid">CoronaViz</a> which shows deaths and cases as a result of COVID-19. This is
+                                    a work in progress, as one might imagine. The system was initially created as visualizing
+                                    <a href="#actors">Top Ten Actors Over Time</a>, work done in conjunction with
+                                    John Grady (Emeritus, Department of
+                                    Sociology, Wheaton College). 
+                                    <br>
+                                    A second project, also done with John Grady, involves the visualization of
+                                    <a href="#socialstrat">Social Stratification</a>.
+                                </li>
+                                
+                                <li><a href="#DEMvis">DEM Error Visualization</a> - many digital elevation models (DEMs) 
+                                are constructed from less-than-perfect data, and along with
+                                the computations necessary to create the final surface, errors are inevitable.  This
+                                research seeks to determine the severity of the error.</li>
+                                
+                                <li><a href="#surface">Surface Reconstruction</a> - creating a 3D (actually 2.5D) surface from 2D sources, 
+                                such as
+                                contour lines (isolines) or other sparse data arranged on a grid.  The data is interpolated
+                                or otherwise used to create a digital elevation model (DEM).  A DEM is useful
+                                for visualization and analysis of a particular region.  Some of this work has been
+                                done in conjunction with
+                                <a href="https://wrf.ecse.rpi.edu/nikola/pages/index.html">Wm. Randolph Franklin</a> (Electrical,
+                                Engineering, and Systems Engineering Department, Rensselaer Polytechnic Institute)
+                                </li>
+                                
+                                <li><a href="#studentResearch">Student Research/Projects</a>
+                                - students are involved with a variety of research or other interesting projects, often in the summer.
+                                </li>
+                            </ul>
+                       </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a id="covid"></a>
+                            <h2>Data Visualization: Clustering and Visualizing COVID-19 Data (CoronaViz)</h2>
+                            <p>
+                            This system grew out of the <a href="#actors">Top Ten Actors</a> visualization. Instead of
+                            individual actors as data points, US states and the total number of COVID-19 deaths and cases
+                            are plotted. The application was modified to use this data, and is continually being updated.
+                            Click on the image below to run the application, which has data up through June 8, 2020.
+                                                        
+                            <div class="divCenter"><a href="http://cs.wheatoncollege.edu/~TRcluster/covidTotal.html" target="_blank">
+                            <img src="images/corona.jpg" width="350" alt="CoronaViz web application image"></a></div>
+                            <p>
+
+                        </td>
+                       <td>
+                            <h2>Data Visualization: Top Ten Actors Over Time</h2>
+                            <p>
+                            This research is being done in collaboration with 
+                            John Grady (Emeritus) of Wheaton College's
+                            Department of Sociology; much of the implementation of the original visualization using Flash was done by 
+                            Melissa Branagan '14. Refactoring to CSS, Javascript, and D3 was begun by Grace Ulinski '17, Zevi Rubin '16,
+                            and Kamran Noorian '17. Work is ongoing on this project.
+                            </p>
+                            <p>
+                            Movie stars represent a persona - a model social type - that captures the public's imagination and
+                            embodies their desires and dreams for a short period of time and, in some cases, much longer.  It seems
+                            that this symbolic space is limited to only a few stars that the viewing public can adore at any one
+                            given time.  In this visualization project, we hope to find these ''alpha stars" and their interconnections.
+                            We also hope to find patterns concerning race/ethnicity, gender, and so forth.  We are working to make
+                            this web-based tool more general so as to work with other top ten data sets, such as baseball batting
+                            averages, to name just one example.
+                            </p>
+                            <p>
+                            Click on an image to run one of the prototype visualizations:
+                            <br>
+                            <ul>
+                                <li>2020<br>
+                            <div class="divCenter"><a href="http://cs.wheatoncollege.edu/~TRcluster" target="_blank">
+                            <img src="images/timeline1.jpg" width="350" alt="Ranking Timeline image"></a></div>
+                                </li>
+                                <li>2016<br>
+                            <div class="divCenter"><a href="http://cs.wheatoncollege.edu/~RankingTimeline" target="_blank">
+                            <img src="images/timeline2.png" alt="Ranking Timeline image"></a></div>
+                                </li>
+                            </ul>
+                            <p>
+                            <strong>Relevant Publications/Presentations</strong>
+                            <ul>
+                                      <li>
+                                      Grady, J. and Gousie, M.  <i>The Social Composition of an Imaginary World: The
+                                      Star Village in Hollywood, 1927-2013.</i> Presented at the International Visual Sociology
+                                      Association (IVSA) Annual Conference, Tinos, Greece, June, 2015.
+                                      <li>
+                                      Gousie, M.B., Grady, J., and Branagan, M.<a href="#studentAuthor">*</a> Visualizing Trends and Clusters
+                                      in Ranked Time-Series Data. In <i>Visualization and Data Analysis 2014</i>
+                                      (San Francisco, 2014), P. C. Wong, D.L. Kao, M.C. Hao, and C. Chen, Eds., vol. 9017,
+                                      IS&amp;T/SPIE, pp. 90710f-1 -- 90710f-12.
+                                      </li>
+                                          <li>
+                                      Grady, J., Gousie, M., and Branagan, M.<a href="#studentAuthor">*</a> 
+                                              <i>Visualizing the Hollywood Pantheon</i>, 
+                                          presented at
+                                      the International Visual Sociology Association (IVSA) Annual Conference,
+                                          University of London, July, 2013. 
+                                      </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h2>DEM and Error Visualization</h2>
+                            <p>
+                            Traditional geographic information systems (GIS) have many capabilities to compute DEM error
+                            and/or uncertainty, but they require the user to go through many complex steps.  Often the result is
+                            simply a number or a 2D visualization.  This research seeks to make the process much easier and faster,
+                            as well as produce a better error visualization.
+                            
+                            <p>
+                            <p>
+                            
+                            <!--<a href="resimages/franconiaAllcurve2.jpg" rel="lightbox" title="hello">-->
+                            <a href="resimages/franconiaAllcurve2.jpg" target="_blank">
+                            <img id="imgRightt" src="images/terrain.jpg" alt="View of a DEM"></a>
+                            The current system, DEMView (formerly DEMEV), is shown at right, displaying a DEM
+                            of Franconia, NH.  The system includes visualizations for relief, raster height colors,
+                            slope, height classes, curvature error, local elevation difference error, and local
+                            curvature difference error.  A vertical <i>profile cutter</i> allows the user to
+                            view a desired profile of two surfaces simultaneously within the context of the 
+                            3D surface visualization.
+                            
+                            <p>
+                            <strong>Relevant Publications/Presentations</strong>
+                            <ul>
+                                              <li>
+                                              Gousie, M.B.  The Case for 3D Visualization in DEM Assessment.  In <i>Advances in Spatial
+                                      Data Handling: Geospatial Dynamics, Geosimulation and Exploratory Visualization</i>,
+                                      S. Timpf and P. Laube, Eds., Advances in Geographic Information Science, Springer, 2013,
+                                      pp. 27-43.
+                                              </li>
+                                              <li>
+                                              Gousie, M.B.  Focus + Context for Visualizing Uncertainty in DEMs.  
+                                      Poster presented at the IEEE Information Visualization Conference, 2011.
+                                          <i>(<a href="papers/uncertPoster.pdf">poster</a>)</i>
+                                              </li>
+                                              <li>
+                                              Gousie, M.B., and Smith, M.J. DEMView: 3D Visualization of DEM Error.
+                                              In <i>Accuracy 2010, Proceedings of the Ninth International 
+                                              Symposium on Spatial Accuracy
+                                              Assessment in Natural Resources and Environmental Sciences  </i>
+                                              (Leicester, UK, July 2010), N.J. Tate and P.F. Fisher, Eds., 
+                                              ISARA, pp. 165-168.
+                                              <i>(<a href="papers/246_Gousie_presentation.ppt">slides</a>,
+                                          <a href="papers/accuracy2010GousieFinal.pdf">paper</a>)</i>
+                                              </li>
+                                              <li>
+                                              Gousie, M. B. and Milewski, S.<a href="#studentAuthor">*</a>  
+                                              A System for 3D Error Visualization and Assessment of 
+                                              Digital Elevation Models.  In <i>Proceedings of the 2007
+                                              IEEE International Geoscience and Remote Sensing 
+                                              Symposium (IGARSS '07)</i> (Barcelona, 2007),
+                                              pp. 4064-4067.
+                                          <i>(<a href="papers/igarss.pdf">paper</a>)</i>
+                                      <br>
+                                              </li>
+                                              <li>
+                                              Gousie, M. B.  Digital Elevation Model Error Detection and Visualization.  In 
+                                      <i>The 4th Workshop on Dynamic & Multi-dimensional GIS</i> (Pontypridd, Wales, UK, 2005), 
+                                          C. Gold, Ed., ISPRS, pp. 42-46. 
+                                          <i>(<a href="papers/gousie_dmgis05.pdf">paper</a>)</i>
+                                      </li>
+                                      <li>
+                                      <a id="compsurf"></a> Gousie, M. B., Williams, G.<a href="#studentAuthor">*</a>, 
+                                              Agnitti, T.<a href="#studentAuthor">*</a>, and
+                                      Doolittle, N.<a href="#studentAuthor">*</a> CompSurf:
+                                      An Environment for Exploring Surface Reconstruction Methods on a Grid. <i>Computers
+                                      &amp; Geosciences 29</i>, 9 (2003), 1165-1173.  
+                                      <i>(<a href="http://authors.elsevier.com/sd/article/S0098300403001298">paper</a>)</i>
+                                      <!-- <b>Source code:</b> <a href="http://cs.wheatoncollege.edu/~mgousie/CompSurfv2.tar.gz">CompSurf v2.0</a> (Developed on Linux platform).  See Figure 7 below. -->
+                                      </li>
+                            </ul>
+                        </td>
+                        <td>
+                            <h2>Surface Reconstruction Algorithms</h2>
+
+                            <p>
+                            In this research, we begin with digitized contour maps, like the one shown below
+                            depicting Mt. Washington, NH:
+                            <img class="centered" src="images/terrainG.gif" alt="Image of a contour map">
+                            From this sparse data set, a full DEM is computed by interpolation and/or approximation
+                            methods while preserving the accuracy of the surface defined by the data.  
+                            An example of a DEM derived by our Intermediate Contour Method is shown below (red=high elevation,
+                            blue=low):
+                            <img class="centered" src="images/terrainR.gif" alt="Image of a contour map with intermediate contours">
+                            
+                            <strong>Surface Reconstruction Animation</strong>
+                            <p>
+                            Another method for creating a DEM is by simulating a thin plate
+                            being draped over the sparse data points to create a surface.
+                            It takes many iterations of the thin plate method
+                            to completely fill in a regular grid of elevation points.  This
+                            animation shows how a sample contour map is filled in with a thin plate
+                            approximation after intermediate contours are computed.
+                            </p>
+                            <!-- surface animation -->
+                            <form id="formStyle">
+                            <input type="button"  name="animation" value="Run Animation"
+                            onClick='window.open("http://cs.wheatoncollege.edu/mgousie/surf_animate.html","_blank","width=650,height=580");'>
+                            </form>
+                            <br>
+                            <p>
+                            <strong>Relevant Publications/Presentations</strong>
+                            <ul>
+                                              <li>
+                                              Smith, M.J., Rose, J., and Gousie, M.B.  The Cookie Cutter: A Method for Obtaining a 
+                                      Quantitative 3D Description of Glacial Bedforms.  
+                                      <i>Geomorphology 108</i> (July 2009), 209-218.
+                                              </li>
+                                          <li>Smith, M.J., Rose, J., and Gousie, M.B. A Method of Quantifying Subglacial Sediment 
+                                      Transport/Deformation. Poster presented at <i>Geomorphology & Earth System Science, 
+                                      BGRG International Conference</i>, Loughborough, UK, June 2006.
+                                      <i>(<a href="papers/Smith_Rose_Gousie_GEES.pdf">poster</a>)</i>
+                                      </li>
+                                          <li>
+                                      Gousie, M. B. and Franklin, W. R. Augmenting Grid-Based Contours to
+                                      Improve Thin Plate DEM Generation.  <i>Photogrammetric
+                                          Engineering &amp; Remote Sensing 71</i>, 1 (2005), pp. 69-79.
+                                              <i>(<a href="papers/2005_jan_69-79.pdf">paper</a>)</i>
+                                          </li>
+                                      <li>
+                                          Gousie, M. B. and Franklin, W. R.  Constructing a
+                                      DEM from Grid-based Data by Computing Intermediate Contours.  In <i>GIS
+                                      2003: Proceedings of the Eleventh ACM International Symposium on
+                                      Advances in Geographic Information Systems</i> (New Orleans, 2003), E.
+                                              Hoel and P. Rigaux, Eds., pp. 71-77. 
+                                              <i>(<a href="papers/micGIS03.pdf">paper</a>)</i>
+                                              </li>
+                                      <li>
+                                      Franklin, R and Gousie, M. Terrain Elevation Data Structure Operations.
+                                      In <i>19th International Cartographic Conference &amp; 11th General
+                                      Assembly of the International Cartographic Association (ICA)</i> (Ottawa, 1999).
+                                      <i>(<a href="papers/ottawa-ica99-terrain.pdf">paper</a>)</i>
+                                      </li>
+                                      <li>
+                                      Gousie, M and Franklin, R. Converting Elevation Contours to a Grid. In <i>Proceedings,
+                                      Eighth International Symposium on Spatial Data Handling</i> (1998), T.
+                                      Poiker and N. Chrisman, Eds., pp. 647-656. 
+                                      <i>(<a href="papers/contourSDH98.pdf">paper</a>)</i>
+                                      </li>
+                                      <li>
+                                      Gousie, M. B. <i>Contours to Digital Elevation Models: Grid-Based
+                                      Surface Reconstruction Methods</i>.  PhD thesis, Rensselaer Polytechnic
+                                      Institute, 1998. <i>(<a href="http://cs.wheatoncollege.edu/~mgousie/papers/thesis.pdf">thesis</a>)</i>
+                            </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a id="studentResearch"></a>
+                            <h2>Student Research/Projects</h2>
+                            <p>
+                            There are many research or independent study projects available in the topics listed above but
+                            also in computer graphics and information visualization in general.  Please see me to discuss
+                            your interests.  You may be surprised at the opportunities available to you!
+                            
+                            <div class="divCenter">
+                            <a href="http://cs.wheatoncollege.edu/~mgousie/resimages/sagui2.jpg">
+                            <img src="images/studentproject.jpg" alt="Image of student project"></a>
+                            <br>
+                            Scene from <i>Lord of the Rings</i> by Pat Sagui '04
+                            </div>
+                            <br>
+                            <br>
+                            <p>
+                            <strong>Student Publications/Presentations</strong>
+                            <ul>
+                                    <li>
+                                    LeBlanc, M., Littler, E., and Loberti, J.  <i>3D Modeling to Virtual
+                                    Viewing: Providing Access to Wheaton's African Collection.</i> 
+                                    Poster presented at the Twenty-Third Annual Consortium for Computing Sciences in Colleges Northeast Conference, April 2018.
+                                    </li>
+                                    <li>
+                                    Ulinski, G. and Rubin, Z.  <i>Information Visualization: Top Ten Rankings over Time</i>.
+                                    Poster presented at the Twentieth Annual Consortium for Computing Sciences in Colleges
+                                    Northeast Conference, April 2016.
+                                    <li>
+                                    Faulconer, N.  <i>Design and Comparison of Parallel Ray-Tracing Algorithms</i>.  Honors
+                                    Thesis, Wheaton College, 2012.
+                                        <li>
+                                        Upshur, R.  <i>Viewing Three-Dimensional Terrain with Focus in Context.</i>
+                                        Poster presented at the Fifteenth Annual Consortium for Computing Sciences
+                                        in Colleges Northeast Conference, April 2010.
+                                    <i>(<a href="resimages/UpshurPoster.bmp">poster</a>)</i>
+                                        </li>
+                                        <li>
+                                        Stuetzle, C.  <i>Computer Modeling and Visualization of Luminescent Crystals: 
+                                    The Role of Energy Transfer and Upconversion</i>. Honors Thesis,
+                                        Wheaton College, 2007.  
+                                    <i>(<a href="http://hdl.handle.net/10090/727">thesis</a>)</i>
+                                        </li>
+                                        <li>
+                                        Bowe, S.  <i>Error Detection and Visualization in Digital Elevation
+                                            Models</i>.  In <i>Journal of Computing Sciences in Colleges</i>, Proceedings of the 
+                                    Tenth Annual CCSC Northeast Conference (2005), pp. 103-104.
+                                            </li>
+                                    <li>
+                                    Williams, G. <i>An Autoscheduling Optimizer for Perl.</i> Honors
+                                    Thesis, Wheaton College, 2003.
+                                    </li>
+                                        <li>
+                                    Williams, G., Doolittle, N., and Agnitti, T.  A Surface Reconstruction
+                                    Research Environment.  In <i>Journal of Computing in Small Colleges</i>,
+                                    Proceedings of the Seventh Annual CCSC Northeast Conference (2002),
+                                    pp. 301-302. </li>
+                            </ul>
+                        </td>
+                        <td>
+                            <h2>Modeling Three-Dimensional Artwork</h2>
+                            <p>
+                            In this student-oriented project, we are modeling sculptures and other artwork from
+                            Wheaton's African Collection.  These true 3D models can then be viewed on a
+                            <a href="http://cs.wheatoncollege.edu/~whedomain/">web page</a> or using virtual reality (VR)
+                            equipment.
+                            </p>
+                            
+                            <div class="divCenter">
+                            <a href="research/treeOfLife.jpg">
+                            <img src="images/treeOfLifeSmall.jpg" class="center" alt="Image of Tree of Life carving"></a>
+                            <br>
+                            3D model of <i>The Tree of Life</i>, from Wheaton's African Collection 
+                            </div>
+                            
+                            <br>
+                            <p>
+                            <strong>Relevant Publications/Presentations</strong>
+                            <ul>
+                                    <li>
+                                    Boylan, K., Gousie, M., and Niederstadt, L. "Modeling and Viewing Three-Dimensional
+                                    Artwork," presented at Digital Commonwealth's 13<sup>th</sup> Annual Conference,
+                                    The College of the Holy Cross, Worcester, MA, April 9, 2019.
+                                    </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <a id="socialstrat"></a>
+                            <h2>Data Visualization: Social Stratification</h2>
+                            <p>
+                            This research was also done in collaboration with 
+                            John Grady (Emeritus) of Wheaton College's
+                            Department of Sociology.  
+                            The idea is to use metaphors to
+                            create easy-to-use visualizations in order to see patterns in socio-economic
+                            data gathered from the US Census (jump to <a href="#update">2019 update</a>).   The Java applets allow the
+                            user to compare different
+                            social classes, ethnic background, job type, and income in a dynamic way.
+                            With the help of students, we have
+                            created web-based prototypes using three different metaphors:
+                            
+                            <ol type="A">
+                            <li> <u>The Target</u> <br>
+                            
+                            This is the original metaphor, where the center of a dart board represents
+                            the highest income level and the rings representing progressively lower levels.
+                            Each "hit" represents 160,000 individuals at that income level.
+                            <!--
+                            <br>
+                            <a href="http://cs.wheatoncollege.edu/~mgousie/social_strat/social.html"
+                                     target="_blank">
+                            Click to run Target 1.0</a>
+                            -->
+                            
+                            <p>
+                            Students Sarah Milewski '07 and Chris Stuetzle '07
+                            implemented a newer applet of The Target which addressed some of the
+                            shortcomings of the original version.
+                            <br>
+                            <!--
+                            <a href="http://cs.wheatoncollege.edu/~mgousie/comp401/SM/Target.html"
+                                     target="_blank">
+                            Click to run Target 2.0</a>
+                            -->
+                            </li>
+                            
+                            <li><u>The Mountain Climber</u> <br>
+                            
+                            In this metaphor, the goal is to climb to the peak of a mountain, where the
+                            highest income levels exist.   The different "mountains" can be moved or
+                            stacked to more easily compare desired parameters.  This is a nice improvement
+                            over The Target.
+                            <p>
+                            This applet was implemented by Sarah Milewski '07 and Chris Stuetzle '07.
+                            <br>
+                            <!--
+                            <a href="http://cs.wheatoncollege.edu/~mgousie/comp401/SM/MountainClimber.html"
+                                     target="_blank">
+                            Click to run MountainClimber</a>
+                            -->
+                            </li>
+                            
+                            <li><u>Census<sup>2</sup> (CensusSquared)</u> <br>
+                            
+                            Students Ben Burrage, Robby Grossman, Dave Machado, all from the Class of 2007,
+                            implemented this metaphor, wherein equal-size boxes are stacked on top and
+                            next to one another so as to allow easy comparisons.  The higher the income, the
+                            more a box is filled.  Although this is perhaps a less-strong metaphor, the
+                            regularity of each box makes it much easier to move about and stack to produce
+                            data patterns.  This implementation also has no inherent clustering effect
+                            that both The Target and Mountain Climber have, as the area gets smaller as
+                            the income level rises in both of the latter implementations.
+                            
+                            <!--
+                            <br>
+                            <a href="http://cs.wheatoncollege.edu/~mgousie/comp401/GradyBunch/censussquared.html"
+                                     target="_blank">
+                            Click to run CensusSquared</a>
+                            </li>
+                            -->
+                            
+                            <p></p>
+                            <p>
+                            <a id="update"></a>
+                            More recently, Nathan Hodges '20 updated Census<sup>2</sup> 
+                            using JavaScript and D3. He also worked on a new approach using a 
+                            <a href="http://cs.wheatoncollege.edu/~nhodgson/censusSquared/zoomable-sunburst/">Zoomable Sunburst</a>,
+                            which includes a dual-chart feature to compare to sets of variables side-by-side.
+                            Click on the image below to run Census<sup>2</sup>.
+                            </p>
+                            
+                                    <div class="divCenter">
+                                        <a href="http://cs.wheatoncollege.edu/~nhodgson/censusSquared/">
+                                        <img src="images/censusSquared.jpg" width="350" alt="censusSquared image"></a></div>
+                            </ol>
+                            
+                            <p>
+                            <strong>Relevant Publications/Presentations</strong>
+                            <ul>
+                                              <li>
+                                              Gousie, M.B., Grady, J., Burrage, B.<a href="#studentAuthor">*</a>, Grossman, R.<a href="#studentAuthor">*</a>, Machado, D., Milewski, S.<a href="#studentAuthor">*</a>, and Stuetzle,
+                                      C.<a href="#studentAuthor">*</a>  
+                                              Using Metaphors in Dynamic Social Stratification Visualizations.  In <i>IV08: 12th 
+                                      International Conference on Information Visualization</i> (London, 2008), IEEE, pp. 485-490.
+                                      <i>(<a href="papers/gousiem-Metaphors.pdf">paper</a>)</i>
+                                              </li>
+                                          <li>
+                                      Gousie, M.B. and Grady, J. <i>Targeting Social Stratification</i>, presented at
+                                      the International Visual Sociology Association (IVSA) Annual Conference,
+                                          San Francisco, August 12, 2004. 
+                                      <i>(<a href="http://cs.wheatoncollege.edu/~mgousie/social_strat/targetIndex.html" 
+                                      target="_blank">talk</a>)</i>
+                                      </li>
+                            
+                            
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td id="bottom" colspan="2">
+                <ul id="bot">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Research.html">Research</a></li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
