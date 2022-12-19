@@ -64,7 +64,7 @@ export const info = {
     bio: "Hey! I'm Anthony. I'm a senior at Wheaton College MA majoring in Compsci and Math-Economics planning to become a software engineer. I'm always out running and listening to the newest music. Check out my projects!",
     skills:
         {
-            proficientWith: ['python', 'c/c++', 'R', 'java', 'sql/nosql', 'javascript', 'html/css', 'jquery', 'php', 'react', 'git', 'firebase', 'jira', 'androidsdk']
+            proficientWith: ['python', 'c/c++', 'R', 'java', 'sql/nosql', 'javascript', 'typescript', 'html/css', 'jquery', 'php', 'react', 'git', 'firebase', 'jira', 'androidsdk']
         }
     ,
     classes:
