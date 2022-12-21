@@ -329,15 +329,28 @@ h1 {
   font-style: italic;
   margin-top: 4px;
 } */
-
-
-.resources {
-  margin-top: 10vh;
+@media only screen and (max-width:767px) {
+  .resources {
+    margin-top: 3vh;
+  }
+  
+  .picAndType {
+    margin-top: 3.75vh;
+  }
+  .containerMe {
+    margin-bottom: 1rem;
+  }
+  .containerMe:hover {
+    transform: scale(1.005);
+  }
+  
+  .containerMe:hover .imgMe {
+    transform: 
+    scale(1.005)
+    translateY(-0.75rem);
+  }
 }
 
-.picAndType {
-  margin-top: 7.5vh;
-}
 
 @media only screen and (min-width:768px) {
   .picAndType {
@@ -345,5 +358,8 @@ h1 {
   }
   .containerMe {
     margin-bottom: 12.5vh;
+  }
+  .resources {
+    margin-top: 10vh;
   }
 }
