@@ -12,7 +12,7 @@ import me from './images/me.png'
 export default function Home() {
     return (
         <div>
-            <Container className="text-center" style={{ overflowX: "hidden", overflowY: "hidden"}}>
+            <Container className="text-center" style={{ overflowX: "hidden", overflowY: "hidden" }}>
                 <Row className="align-items-center align-middle justify-content-center picAndType" >
                     <Col>
                         <div className="person">
