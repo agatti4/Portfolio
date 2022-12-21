@@ -29,7 +29,7 @@ body {
   -moz-animation: Gradient 15s ease infinite;
   animation: Gradient 15s ease infinite;
   background-color: var(--color1);
-  padding-top: 60px;
+  /* padding-top: 60px; */
   overflow-y: scroll;
 }
 
@@ -268,3 +268,81 @@ h1 {
   border-color: orange !important;
 }
 
+.person {
+  --transfrom-speed: 550ms;
+  position: relative;
+  max-width: 15rem;
+  margin-inline: auto;
+}
+
+.containerMe {
+  display: grid;
+  align-items: end;
+  overflow: hidden;
+  border-radius: 0 0 100vw 100vw;
+  aspect-ratio: 1 / 1.35;
+  transition: transform var(--transfrom-speed) ease-in-out;
+  margin-bottom: 5rem;
+}
+
+.containerMe:hover {
+  transform: scale(1.1);
+}
+
+.containerMe:hover .imgMe {
+  transform: 
+  scale(1.05)
+  translateY(-1rem);
+}
+
+.circle {
+  background-color: #fee7d3;
+  border-radius: 50%;
+  position: absolute;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  margin-inline: auto;
+  object-fit: cover;
+  inset: auto 0 0;
+}
+.imgMe {
+  position: relative;
+  z-index: 2;
+  right: 7rem;
+  bottom: 5rem;
+  /* transform: scale(1.4); */
+  transition: transform calc(var(--transfrom-speed) * 1.2) ease-in-out;
+
+}
+/* .name {
+  color: #404245;
+  font-size: 36px;
+  font-weight: 600;
+  margin-top: 16px;
+  text-align: center;
+}
+.title {
+  color: #6e6e6e;
+  font-family: arial;
+  font-size: 14px;
+  font-style: italic;
+  margin-top: 4px;
+} */
+
+
+.resources {
+  margin-top: 10vh;
+}
+
+.picAndType {
+  margin-top: 7.5vh;
+}
+
+@media only screen and (min-width:768px) {
+  .picAndType {
+    margin-top: 20vh;
+  }
+  .containerMe {
+    margin-bottom: 12.5vh;
+  }
+}

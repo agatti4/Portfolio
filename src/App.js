@@ -1,5 +1,5 @@
 import NavBar from './components/Navbar/Navbar.js';
-import Home from './pages/Home.js';
+import Home from './pages/Home/Home.js';
 import About from './pages/About/About.js';
 import Projects from './pages/Projects/Projects.js';
 // import Contact from './pages/Contact.js';

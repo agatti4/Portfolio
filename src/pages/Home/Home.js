@@ -6,13 +6,22 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button'
 import { SocialIcon } from 'react-social-icons';
-import resume from '../components/Resume/resume.pdf'
+import resume from '../../components/Resume/resume.pdf'
+import me from './images/me.png'
 
 export default function Home() {
     return (
         <div>
             <Container className="text-center" style={{ overflowX: "hidden", overflowY: "hidden"}}>
-                <Row className="align-items-center align-middle justify-content-center" style={{ marginTop: "35vh"}}>
+                <Row className="align-items-center align-middle justify-content-center picAndType" >
+                    <Col>
+                        <div className="person">
+                            <div className="containerMe">
+                                <img className="circle" src="" alt="circle" />
+                                <img className="imgMe" alt="me" src={me} />
+                            </div>
+                        </div>
+                    </Col>
                     <Col>
                         <div className="typeBox">
                             <h1 className="typewriter">My Name is Anthony</h1>
@@ -29,7 +38,7 @@ export default function Home() {
                 </Row>
                 <Row>
                 </Row>
-                <Row style={{ marginTop: "20vh"}}>
+                <Row className="resources">
                     <Col>
                         <div>
                             <a href={resume} download="resume.pdf">
