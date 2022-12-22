@@ -29,7 +29,7 @@ body {
   -moz-animation: Gradient 15s ease infinite;
   animation: Gradient 15s ease infinite;
   background-color: var(--color1);
-  /* padding-top: 60px; */
+  padding-top: 70px;
   overflow-y: scroll;
   margin-bottom: 5vh;
 }
@@ -331,14 +331,14 @@ h1 {
 } */
 @media only screen and (max-width:767px) {
   .resources {
-    margin-top: 3vh;
+    margin-top: 2vh;
   }
   
   .picAndType {
-    margin-top: 3.75vh;
+    margin-top: -4.25vh;
   }
   .containerMe {
-    margin-bottom: 2.5vh;
+    margin-bottom: 1.5vh;
   }
   .containerMe:hover {
     transform: scale(1.005);
@@ -354,7 +354,7 @@ h1 {
 
 @media only screen and (min-width:768px) {
   .picAndType {
-    margin-top: 20vh;
+    margin-top: 15vh;
   }
   .containerMe {
     margin-bottom: 12.5vh;
